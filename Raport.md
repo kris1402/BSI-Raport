@@ -120,4 +120,4 @@ W trakcie audytu szczególny nacisk położono na podatności mające lub mogąc
   <img width="600" height="180" src="A07_4.png">
     </p>
 
-    W aplikacji zidentyfikowano błędy SQL Injection, pozwalające napastnikom na pełny dostęp do bazy danych danej instancji YetiForce. W konsekwencji wykorzystania tej podatności możliwy jest: • Dostęp do hashy haseł użytkowników systemu, • Dostęp do danych wszystkich kontrahentów, • Dostęp do treści maili.
+    W aplikacji zidentyfikowano błędy SQL Injection, pozwalające napastnikom na pełny dostęp do bazy danych danej instancji YetiForce. W konsekwencji wykorzystania tej podatności możliwy jest: • Dostęp do hashy haseł użytkowników systemu, • Dostęp do danych wszystkich kontrahentów, • Dostęp do treści mailis.
