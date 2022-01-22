@@ -32,7 +32,10 @@ ___
 
 Na liście poniżej przedstawiono skrótowy opis każdej z podatności. Każdy błąd został oznaczony kolorem, zgodnie z legendą:
 
-![alt text](Obraz1.png)
+
+<p align="center">
+  <img width="600" height="90" src="Obraz1.png">
+</p>
 
 >+ **Niskie Zagrożenie: –** *wykorzystanie podatności ma niewielki bezpośredni wpływ na bezpieczeństwo aplikacji lub wymaga bardzo trudnych warunków do spełnienia (np. fizyczny dostęp do serwera).*
 
@@ -40,4 +43,64 @@ Na liście poniżej przedstawiono skrótowy opis każdej z podatności. Każdy b
 
 >+ **Wysokie zagrożenie  –** *wykorzystanie podatności umożliwia przejęcie pełnej kontroli nad serwerem lub urządzeniem sieciowym albo pozwala uzyskać dostęp (w trybie zapisu i/lub odczytu) do danych o dużym poziomie poufności i istotności. Wykorzystanie podatności pozwala także na uzyskanie dostępu do wrażliwych informacji, może wcześniej wymagać spełnienia pewnych warunków (np. posiadania konta użytkownika w wewnętrznym systemie).*
 
+___
 
+### 3. **Lista odnalezionych podatności - szczegóły**
+
+Niniejszy raport jest podsumowaniem testów bezpieczeństwa przeprowadzonych w celu wykrycia ewentualnych luk w oprogramowaniu. Przedmiotem  sprawdzenia była aplikacja webowa *Vulnerable Web Application*.
+
+W trakcie audytu szczególny nacisk położono na podatności mające lub mogące mieć negatywny wpływ na poufność, integralność oraz dostępność przetwarzanych danych. Testy bezpieczeństwa przeprowadzono zgodnie z powszechnie przyjętymi metodykami testowania aplikacji webowych, takimi jak: **OWASP TOP10**
+#### a. *Podatności XSS (Cross-Site Scripting)*
+
+    Na czym polega istota podatności XSS? Po pierwsze jest to przede wszystkim atak na klienta korzystającego z podatnej webaplikacji (w przeciwieństwie np. do SQL injection, którego głównym celem jest część serwerowa). Po drugie, atak polega na wstrzyknięciu do przeglądarki ofiary fragmentu javascript który może być uruchomiony w przeglądarce.
+
+    W efekcie, atakujący ma możliwość wykonania dowolnego kodu skryptowego w przeglądarce 
+
+**Poziom ryzyka:**
+<p align="center">
+  <img width="200" height="90" src="zs.png">
+    </p>
+
+    Liczne wystąpienia, m.in. nazwa użytkownika w historii logowania, nazwy produktów itp. 
+    Brak lub dowolne konto w systemie (w zależności od konkretnego wystąpienia).
+
+<p align="center">
+  <img width="600" height="100" src="A01.png">
+    </p>
+<p align="center">
+  <img width="600" height="160" src="A02.png">
+    </p>
+    <p align="center">
+  <img width="600" height="120" src="A03.png">
+    </p>  
+    <p align="center">
+  <img width="600" height="140" src="A04.png">
+    </p>   
+    <p align="center">
+  <img width="600" height="140" src="A05.png">
+    </p>   
+    <p align="center">
+  <img width="600" height="160" src="A06.png">
+    </p>    
+    <p align="center">
+  <img width="600" height="100" src="A07.png">
+    </p>
+    
+**Rekomendacja:**
+    Filtrowanie wprowadzanych danych oraz sprawdzenie znaków potencjalnie niebezpiecznych. Zmiana znaków zpecjalnych na encje.
+
+#### b. *Podatności Sql Injection*
+
+**Poziom Ryzyka:**
+
+<p align="center">
+  <img width="200" height="90" src="wz.png">
+    </p>
+
+    W aplikacji zidentyfikowano błędy SQL Injection, pozwalające napastnikom na pełny dostęp do bazy danych danej instancji W konsekwencji wykorzystania tej podatności możliwy jest:
+
+    Widoczna informacja na temat  bazy danych oraz znajdujących się w niej tabel.
+
+<p align="center">
+  <img width="320" height="400" src="Table.png">
+    </p>
