@@ -52,7 +52,9 @@ Niniejszy raport jest podsumowaniem testów bezpieczeństwa przeprowadzonych w c
 W trakcie audytu szczególny nacisk położono na podatności mające lub mogące mieć negatywny wpływ na poufność, integralność oraz dostępność przetwarzanych danych. Testy bezpieczeństwa przeprowadzono zgodnie z powszechnie przyjętymi metodykami testowania aplikacji webowych, takimi jak: **OWASP TOP10**
 #### a. *Podatności XSS (Cross-Site Scripting)*
 
-    Na czym polega istota podatności XSS? Po pierwsze jest to przede wszystkim atak na klienta korzystającego z podatnej webaplikacji (w przeciwieństwie np. do SQL injection, którego głównym celem jest część serwerowa). Po drugie, atak polega na wstrzyknięciu do przeglądarki ofiary fragmentu javascript który może być uruchomiony w przeglądarce.
+    Na czym polega istota podatności XSS? Po pierwsze jest to przede wszystkim atak na klienta korzystającego z podatnej webaplikacji (w przeciwieństwie np. do SQL injection, którego głównym celem jest część serwerowa). 
+    
+    Po drugie, atak polega na wstrzyknięciu do przeglądarki ofiary fragmentu javascript który może być uruchomiony w przeglądarce.
 
     W efekcie, atakujący ma możliwość wykonania dowolnego kodu skryptowego w przeglądarce 
 
@@ -97,7 +99,8 @@ W trakcie audytu szczególny nacisk położono na podatności mające lub mogąc
   <img width="200" height="90" src="wz.png">
     </p>
 
-    W aplikacji zidentyfikowano błędy SQL Injection, pozwalające napastnikom na pełny dostęp do bazy danych danej instancji W konsekwencji wykorzystania tej podatności możliwy jest:
+    W aplikacji zidentyfikowano błędy SQL Injection, pozwalające napastnikom na pełny dostęp do bazy danych danej 
+    instancji W konsekwencji wykorzystania tej podatności możliwy jest:
 
     Widoczna informacja na temat  bazy danych oraz znajdujących się w niej tabel.
 
