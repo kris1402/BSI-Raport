@@ -50,21 +50,22 @@ ___
 Niniejszy raport jest podsumowaniem testów bezpieczeństwa przeprowadzonych w celu wykrycia ewentualnych luk w oprogramowaniu. Przedmiotem  sprawdzenia była aplikacja webowa *Vulnerable Web Application*.
 
 W trakcie audytu szczególny nacisk położono na podatności mające lub mogące mieć negatywny wpływ na poufność, integralność oraz dostępność przetwarzanych danych. Testy bezpieczeństwa przeprowadzono zgodnie z powszechnie przyjętymi metodykami testowania aplikacji webowych, takimi jak: **OWASP TOP10**
-#### a. *Podatności XSS (Cross-Site Scripting)*
 
-    Na czym polega istota podatności XSS? Po pierwsze jest to przede wszystkim atak na klienta korzystającego z podatnej webaplikacji (w przeciwieństwie np. do SQL injection, którego głównym celem jest część serwerowa). 
-    
-    Po drugie, atak polega na wstrzyknięciu do przeglądarki ofiary fragmentu javascript który może być uruchomiony w przeglądarce.
+#### A. **Podatności XSS (Cross-Site Scripting)**
 
-    W efekcie, atakujący ma możliwość wykonania dowolnego kodu skryptowego w przeglądarce 
+---
+Na czym polega istota podatności XSS? Po pierwsze jest to przede wszystkim atak na klienta korzystającego z podatnej webaplikacji (w przeciwieństwie np. do SQL injection, którego głównym celem jest część serwerowa).
+
+Po drugie, atak polega na wstrzyknięciu do przeglądarki ofiary fragmentu javascript który może być uruchomiony w przeglądarce.
+
+  W efekcie, atakujący ma możliwość wykonania dowolnego kodu skryptowego w przeglądarce 
 
 **Poziom ryzyka:**
 <p align="center">
   <img width="200" height="90" src="zs.png">
     </p>
 
-    Liczne wystąpienia, m.in. nazwa użytkownika w historii logowania, nazwy produktów itp. 
-    Brak lub dowolne konto w systemie (w zależności od konkretnego wystąpienia).
+  Liczne wystąpienia, m.in. nazwa użytkownika w historii logowania, nazwy produktów itp. Brak lub dowolne konto w systemie (w zależności od konkretnego wystąpienia).
 
 <p align="center">
   <img width="600" height="100" src="A01.png">
@@ -95,9 +96,12 @@ ___
 
 
 
-#### b. **Podatności Sql Injection**
+#### B. **Podatności Sql Injection**
 ___
-  W aplikacji zidentyfikowano błędy SQL Injection, pozwalające napastnikom na pełny dostęp do bazy danych danej instancji YetiForce. W konsekwencji wykorzystania tej podatności możliwy jest: • Dostęp do hashy haseł użytkowników systemu, Dostęp do danych wszystkich kontrahentów, Dostęp do treści maili.
+  W aplikacji zidentyfikowano błędy SQL Injection, pozwalające napastnikom na pełny dostęp do bazy danych danej instancji YetiForce. Użytkownik może poznać zawartość bazy a taj ze modyfikować. W konsekwencji wykorzystania tej podatności możliwy jest: 
+  >1. Dostęp do hashy haseł użytkowników systemu
+  >2. Dostęp do danych wszystkich kontrahentów
+  >3. Dostęp do treści maili.
 ___
 **Poziom Ryzyka:**
 
@@ -105,10 +109,10 @@ ___
   <img width="200" height="90" src="wz.png">
     </p>
 
-    W aplikacji zidentyfikowano błędy SQL Injection, pozwalające napastnikom na pełny dostęp do bazy danych danej 
-    instancji W konsekwencji wykorzystania tej podatności możliwy jest:
+  W aplikacji zidentyfikowano błędy SQL Injection, pozwalające napastnikom na pełny dostęp do bazy danych danej 
+  instancji W konsekwencji wykorzystania tej podatności możliwy jest:
 
-    Widoczna informacja na temat  bazy danych oraz znajdujących się w niej tabel.
+  Widoczna informacja na temat  bazy danych oraz znajdujących się w niej tabel.
 
 <p align="center">
   <img width="320" height="400" src="Table.png">
@@ -128,5 +132,38 @@ ___
 
 ___
 **Rekomendacja:**
-    Filtrowanie wprowadzanych danych oraz sprawdzenie znaków potencjalnie niebezpiecznych. Zmiana znaków zpecjalnych na encje.
+    Każda operacja na bazie danych powinna być wykonywana ze szczególna ostrożnością. Propozycje obrony przd SQL Injection:
+  > - Używanie spreparowanych instrukcji  
+  > - Używanie procedur przechowywanych
+  > - Filtorwanie danych użytkownika
+  > - Sprawdzanie danych wejściowych z listą dozwolych wyrażeń
+
+#### C. **Command Execution**
 ___
+
+*curl http://127.0.0.1/.testing/rce.txt*
+
+<p align="center">
+  <img width="600" height="300" src="A07_5.png">
+    </p>
+        
+  <p align="center">
+  <img width="600" height="300" src="A07_6.png">
+    </p>
+
+
+#### D. **File inclusion vulnerability**
+___
+
+Typ ataku często dotyczy aplikacji webowych, które opierają się na skryptach i pojawiają się, gdy aplikacja webowa pozwala użytkownikom na wprowadzanie danych do plików lub wysyłanie plików na serwer.
+
+File inclusion vulnerability zielą się na dwa typy, w zależności od pochodzenia dołączanego pliku:
+>+ Lokalne dołączanie plików (LFI)
+>+ Zdalne dołączanie plików (LFI)
+___
+
+**Poziom Ryzyka:**
+
+<p align="center">
+  <img width="200" height="90" src="wz.png">
+    </p>
