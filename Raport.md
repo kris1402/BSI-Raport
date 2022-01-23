@@ -1,7 +1,7 @@
 # **Bezpieczeństwo Systemów Informatycznych**
 ## Raport Bezpieczeństwa
 * *Data wykonania raportu: 20.01.2022* 
-* *Wersja 1.0*
+* *Wersja Raportu 1.0*
 
 ***
 
