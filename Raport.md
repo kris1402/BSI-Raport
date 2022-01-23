@@ -24,15 +24,15 @@ Czynniki mające wpływ na brak zgodności z wymogami to przedewszytkim:
 
 ***
 
-### 2. **Zakre i Cele audytu**
+### 2. **Zakres i Cele audytu**
 
-#### 2.1 **Cele i metofologia audytu**
+#### 2.1 **Cele i metodologia audytu**
 
 **Celem audytu była weryfukacja spełanienia przez aplikację standardu bezpieczeństwa ASVS 4.0 na poziomie 2.** 
 ***
 
-#### 2.2 **Zakre audytu:**
->**Audyt Objoł Następujące obszary:**
+#### 2.2 **Zakres audytu:**
+>**Audyt Objął Następujące obszary:**
 >+ Architektura Aplikacji
 >+ Modelowanie zagrożeń
 >+ Metody uwierzytelniania
