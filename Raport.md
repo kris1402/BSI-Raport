@@ -10,8 +10,20 @@ Aplikacja  *Vulnerable Web Application*. Strona zostałą przygotowana jako przy
 ------
 
 ![alt text](Front.png)
+
+
 ***
-### 1. **Aplikacja** 
+### 1. **Podsumowanie**
+Audyt bezpieczeństwa webowej plikacji *Vulnerable Web Application* został przeprowadzony w celu weryfikacje ze standardem *Application Security Verification Standard (ASVS)* w wersji 4.0 pod kątem ogólnego bezpiezeństwa aplikacji. BAdana apliakcja została stworzona z myślą o wskazaniu wszekiego rodzoaju podatności więć jej ogólna zogodność ze standardem jest niewielka.
+
+Czynniki mające wpływ na brak zgodności z wymogami to przedewszytkim:
+>- Brak kontroli przesłanych przez użytkownika plików
+>- Podatność na cross site scripting (XSS)
+>- Podatność na atakm takie jak np SQL Injection 
+>- Ponadto, w systemie zostało zidentyfikowanych kilka podatności o mniejszym poziomie istotności, które jednak też mogą w pewien sposób ułatwiać napastnikom przejęcie kontroli nad systemem
+
+***
+### 2. **Aplikacja** 
 >+ **Nazwa:** *Vulnerable Web Application*
 >+ **Technologia aplikacji:** *Apache 2.4.18, PHP 5.6.21*
 >+ **Back-end:** *MySql 5.0*
@@ -28,7 +40,7 @@ Vulnerable-Web-Application obejmuje Command Execution, File Inclusion, File Uplo
 
 ___
 
-### 2. **Klasyfikacja podatności**
+### 3. **Klasyfikacja podatności**
 
 Na liście poniżej przedstawiono skrótowy opis każdej z podatności. Każdy błąd został oznaczony kolorem, zgodnie z legendą:
 
@@ -45,7 +57,7 @@ Na liście poniżej przedstawiono skrótowy opis każdej z podatności. Każdy b
 
 ___
 
-### 3. **Lista odnalezionych podatności - szczegóły**
+### 4. **Lista odnalezionych podatności - szczegóły**
 
 Niniejszy raport jest podsumowaniem testów bezpieczeństwa przeprowadzonych w celu wykrycia ewentualnych luk w oprogramowaniu. Przedmiotem  sprawdzenia była aplikacja webowa *Vulnerable Web Application*.
 
@@ -211,7 +223,7 @@ ___
 
 ___
 
-### 3. **4.	Wnioski z testów**
+### 5. **Wnioski z testów**
 
 W aplikacji zidentyfikowano kilka sposobów na wykonywanie dowolnego kodu po stronie serwera. Praktycznie tego typu podatność może zostać wykorzystana m.in. do:
 
