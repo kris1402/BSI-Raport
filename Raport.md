@@ -178,7 +178,7 @@ ___
 *curl http://127.0.0.1/.testing/rce.txt*
 
 <p align="center">
-  <img width="600" height="300" src="A08.png">
+  <img width="600" height="300" src="A07_5.png">
     </p>
         
   <p align="center">
