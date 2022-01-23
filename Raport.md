@@ -190,7 +190,7 @@ ___
 
 **Poziom Ryzyka:**
 
-Użytkownik w Search Barzu może zauplodować plik o dowolnym formacie. 
+Użytkownik w Search Barzu może zauplodować plik o dowolnym formacie. Nie ma weryfikacji wprowadzanego uploadowanego pliku. 
 
 <p align="center">
   <img width="200" height="90" src="wz.png">
@@ -202,6 +202,12 @@ Użytkownik w Search Barzu może zauplodować plik o dowolnym formacie.
   
 <p align="center">
   <img width="600" height="150" src="A07_8_1.png">
+
+
+___
+
+**Rekomendacja:**
+    Należy wprowadzić weryfikację uplaudowanych plików. Użytkownik powienin mieć możliwość wgrania pliku jedynie o danym formacie oraz rozmiarze.
 
 ___
 
