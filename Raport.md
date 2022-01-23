@@ -167,3 +167,20 @@ ___
 <p align="center">
   <img width="200" height="90" src="wz.png">
     </p>
+
+<p align="center">
+  <img width="600" height="300" src="A07_7.png">
+    </p>
+  
+<p align="center">
+  <img width="600" height="200" src="A07_8.png">
+    </p>
+
+<p align="center">
+  <img width="600" height="200" src="A07_9.png">
+    </p>
+
+___
+
+**Rekomendacja:**
+    Aby zminimalizować ryzyko ataków RFI, należy wdrożyć odpowiednią walidację i sanityzację danych wejściowych. 
