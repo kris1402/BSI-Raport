@@ -203,11 +203,11 @@ ___
     </p>
 
 <p align="center">
-  <img width="600" height="300" src="A07_7.png">
+  <img width="600" height="500" src="A07_7.png">
     </p>
   
 <p align="center">
-  <img width="600" height="200" src="A07_8.png">
+  <img width="600" height="250" src="A07_8.png">
     </p>
 
 <p align="center">
@@ -231,7 +231,7 @@ Użytkownik w Search Barzu może zauplodować plik o dowolnym formacie. Nie ma w
     </p>
 
 <p align="center">
-  <img width="600" height="200" src="A08.png">
+  <img width="600" height="250" src="A08.png">
     </p>
   
 <p align="center">
