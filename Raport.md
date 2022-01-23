@@ -23,7 +23,12 @@ Czynniki mające wpływ na brak zgodności z wymogami to przedewszytkim:
 >- Ponadto, w systemie zostało zidentyfikowanych kilka podatności o mniejszym poziomie istotności, które jednak też mogą w pewien sposób ułatwiać napastnikom przejęcie kontroli nad systemem
 
 ***
-### 2. **Aplikacja** 
+
+### 2. **Cel audytu**
+**Celem audytu była weryfukacja spełanienia przez aplikację standardu bezpieczeństwa ASVS 4.0 na poziomie 2.** 
+***
+
+### 3. **Aplikacja** 
 >+ **Nazwa:** *Vulnerable Web Application*
 >+ **Technologia aplikacji:** *Apache 2.4.18, PHP 5.6.21*
 >+ **Back-end:** *MySql 5.0*
@@ -40,7 +45,7 @@ Vulnerable-Web-Application obejmuje Command Execution, File Inclusion, File Uplo
 
 ___
 
-### 3. **Klasyfikacja podatności**
+### 4. **Klasyfikacja podatności**
 
 Na liście poniżej przedstawiono skrótowy opis każdej z podatności. Każdy błąd został oznaczony kolorem, zgodnie z legendą:
 
@@ -57,7 +62,7 @@ Na liście poniżej przedstawiono skrótowy opis każdej z podatności. Każdy b
 
 ___
 
-### 4. **Lista odnalezionych podatności - szczegóły**
+### 5. **Lista odnalezionych podatności - szczegóły**
 
 Niniejszy raport jest podsumowaniem testów bezpieczeństwa przeprowadzonych w celu wykrycia ewentualnych luk w oprogramowaniu. Przedmiotem  sprawdzenia była aplikacja webowa *Vulnerable Web Application*.
 
@@ -223,7 +228,7 @@ ___
 
 ___
 
-### 5. **Wnioski z testów**
+### 6. **Wnioski z testów**
 
 W aplikacji zidentyfikowano kilka sposobów na wykonywanie dowolnego kodu po stronie serwera. Praktycznie tego typu podatność może zostać wykorzystana m.in. do:
 
