@@ -87,12 +87,18 @@ W trakcie audytu szczególny nacisk położono na podatności mające lub mogąc
     <p align="center">
   <img width="600" height="100" src="A07.png">
     </p>
-    
+
+___
+
 **Rekomendacja:**
     Filtrowanie wprowadzanych danych oraz sprawdzenie znaków potencjalnie niebezpiecznych. Zmiana znaków zpecjalnych na encje.
 
-#### b. *Podatności Sql Injection*
 
+
+#### b. **Podatności Sql Injection**
+___
+  W aplikacji zidentyfikowano błędy SQL Injection, pozwalające napastnikom na pełny dostęp do bazy danych danej instancji YetiForce. W konsekwencji wykorzystania tej podatności możliwy jest: • Dostęp do hashy haseł użytkowników systemu, Dostęp do danych wszystkich kontrahentów, Dostęp do treści maili.
+___
 **Poziom Ryzyka:**
 
 <p align="center">
@@ -120,4 +126,7 @@ W trakcie audytu szczególny nacisk położono na podatności mające lub mogąc
   <img width="600" height="180" src="A07_4.png">
     </p>
 
-    W aplikacji zidentyfikowano błędy SQL Injection, pozwalające napastnikom na pełny dostęp do bazy danych danej instancji YetiForce. W konsekwencji wykorzystania tej podatności możliwy jest: • Dostęp do hashy haseł użytkowników systemu, Dostęp do danych wszystkich kontrahentów, Dostęp do treści maili.
+___
+**Rekomendacja:**
+    Filtrowanie wprowadzanych danych oraz sprawdzenie znaków potencjalnie niebezpiecznych. Zmiana znaków zpecjalnych na encje.
+___
