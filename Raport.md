@@ -132,7 +132,7 @@ ___
 
 #### B. **Podatności Sql Injection**
 ___
-  W aplikacji zidentyfikowano błędy SQL Injection, pozwalające napastnikom na pełny dostęp do bazy danych danej instancji. Użytkownik może poznać zawartość bazy a taj ze modyfikować. W konsekwencji wykorzystania tej podatności możliwy jest: 
+  W aplikacji zidentyfikowano błędy SQL Injection, pozwalające napastnikom na pełny dostęp do bazy danych danej instancji. Użytkownik może poznać zawartość bazy ale również modyfikować. W konsekwencji wykorzystania tej podatności możliwy jest: 
   >1. Dostęp do hashy haseł użytkowników systemu
   >2. Dostęp do danych wszystkich kontrahentów
   >3. Dostęp do treści maili.
@@ -172,21 +172,9 @@ ___
   > - Filtorwanie danych użytkownika
   > - Sprawdzanie danych wejściowych z listą dozwolych wyrażeń
 
-#### C. **Command Execution**
-___
-
-*curl http://127.0.0.1/.testing/rce.txt*
-
-<p align="center">
-  <img width="600" height="300" src="A07_5.png">
-    </p>
-        
-  <p align="center">
-  <img width="600" height="300" src="A07_6.png">
-    </p>
 
 
-#### D. **File inclusion vulnerability**
+#### C. **File inclusion vulnerability**
 ___
 
 Typ ataku często dotyczy aplikacji webowych, które opierają się na skryptach i pojawiają się, gdy aplikacja webowa pozwala użytkownikom na wprowadzanie danych do plików lub wysyłanie plików na serwer.
@@ -219,7 +207,7 @@ ___
 **Rekomendacja:**
     Aby zminimalizować ryzyko ataków RFI, należy wdrożyć odpowiednią walidację i sanityzację danych wejściowych. 
 
-#### E. **File Uploads**
+#### D. **File Uploads**
 ___
 
 **Poziom Ryzyka:**
