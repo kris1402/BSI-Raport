@@ -144,7 +144,7 @@ ___
 *curl http://127.0.0.1/.testing/rce.txt*
 
 <p align="center">
-  <img width="600" height="300" src="A07_5.png">
+  <img width="600" height="300" src="A08.png">
     </p>
         
   <p align="center">
@@ -177,10 +177,45 @@ ___
     </p>
 
 <p align="center">
-  <img width="600" height="200" src="A07_9.png">
+  <img width="600" height="300" src="A07_9.png">
     </p>
 
 ___
 
 **Rekomendacja:**
     Aby zminimalizować ryzyko ataków RFI, należy wdrożyć odpowiednią walidację i sanityzację danych wejściowych. 
+
+#### E. **File Uploads**
+___
+
+**Poziom Ryzyka:**
+
+Użytkownik w Search Barzu może zauplodować plik o dowolnym formacie. 
+
+<p align="center">
+  <img width="200" height="90" src="wz.png">
+    </p>
+
+<p align="center">
+  <img width="600" height="200" src="A08.png">
+    </p>
+  
+<p align="center">
+  <img width="600" height="150" src="A07_8_1.png">
+
+___
+
+### 3. **4.	Wnioski z testów**
+
+W aplikacji zidentyfikowano kilka sposobów na wykonywanie dowolnego kodu po stronie serwera. Praktycznie tego typu podatność może zostać wykorzystana m.in. do:
+
+>+ Przejęcia wszystkich danych przechodzących przez system. Mogą to być zarówno dane użytkowników systemu (loginy i hasła), jak i dane przetwarzane przez system, takie jak: listy kontrahentów, dane osobowe itp
+>+ Dalszych ataków na inne hosty znajdujące się w sieci wewnętrznej
+
+Zwraca również uwagę duża liczba podatności typu Cross-Site Scripting (XSS), które mogą zostać wykorzystane do wstrzyknięcia niepożądanego kodu. 
+
+Mechanizm importowania plików dostępny dla wszystkich użytkowników systemu YetiForce w niewystarczający sposób waliduje poprawność wysyłanych plików, pozwalając tym samym na wgranie pliku PHP do dowolnego katalogu serwera.
+
+Ponadto, w systemie zostało zidentyfikowanych kilka podatności o mniejszym poziomie istotności, które jednak też mogą w pewien sposób ułatwiać napastnikom przejęcie kontroli nad systemem. 
+
+Wszystkie problemy zostały szczegółowo opisane w niniejszym raporcie.
