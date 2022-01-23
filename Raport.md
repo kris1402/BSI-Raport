@@ -132,7 +132,7 @@ ___
 
 #### B. **Podatności Sql Injection**
 ___
-  W aplikacji zidentyfikowano błędy SQL Injection, pozwalające napastnikom na pełny dostęp do bazy danych danej instancji YetiForce. Użytkownik może poznać zawartość bazy a taj ze modyfikować. W konsekwencji wykorzystania tej podatności możliwy jest: 
+  W aplikacji zidentyfikowano błędy SQL Injection, pozwalające napastnikom na pełny dostęp do bazy danych danej instancji. Użytkownik może poznać zawartość bazy a taj ze modyfikować. W konsekwencji wykorzystania tej podatności możliwy jest: 
   >1. Dostęp do hashy haseł użytkowników systemu
   >2. Dostęp do danych wszystkich kontrahentów
   >3. Dostęp do treści maili.
@@ -254,7 +254,7 @@ W aplikacji zidentyfikowano kilka sposobów na wykonywanie dowolnego kodu po str
 
 Zwraca również uwagę duża liczba podatności typu Cross-Site Scripting (XSS), które mogą zostać wykorzystane do wstrzyknięcia niepożądanego kodu. 
 
-Mechanizm importowania plików dostępny dla wszystkich użytkowników systemu YetiForce w niewystarczający sposób waliduje poprawność wysyłanych plików, pozwalając tym samym na wgranie pliku PHP do dowolnego katalogu serwera.
+Mechanizm importowania plików dostępny dla wszystkich użytkowników systemu w niewystarczający sposób waliduje poprawność wysyłanych plików, pozwalając tym samym na wgranie pliku PHP do dowolnego katalogu serwera.
 
 Ponadto, w systemie zostało zidentyfikowanych kilka podatności o mniejszym poziomie istotności, które jednak też mogą w pewien sposób ułatwiać napastnikom przejęcie kontroli nad systemem. 
 
